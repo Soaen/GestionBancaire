@@ -14,7 +14,7 @@ public class ServiceManagment {
             case 3 :
 //                creerCompteBancaire
             case 4 :
-//                rechercheCompte
+                cm.searchClient();
             case 5 :
 //                rechercheClient
             case 6 :

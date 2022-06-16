@@ -15,7 +15,10 @@ public class Compte {
         this.client = client;
     }
 
-    public Compte() {
 
+    public int getNbAccount() {
+        return nbAccount;
     }
+
+    public Compte() {}
 }

@@ -4,11 +4,13 @@ import fr.example.beans.Client;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class ClientManagment {
     Scanner sc = new Scanner(System.in);
-    ArrayList<Client> clientList = new ArrayList<Client>();
+    ArrayList<Client> clientList = new ArrayList<>();
     public void creerClient() {
         System.out.println("Identifiant Client : ");
         String id = sc.nextLine();
@@ -24,10 +26,12 @@ public class ClientManagment {
     }
 
 
-    public void searchClient(String id){
+    public void searchClient(){
+        System.out.println("Quel est l'ID du client que vous recherchez ?");
+        String id = sc.nextLine();
         clientList.forEach(e ->{
-            if(e.getId() == id){
-                System.out.println("ID : " + e.getId() + "Nom : " + e.getName() + "Numéro de compte : ");
+            if(Objects.equals(e.getId(), id)){
+                System.out.println("ID : " + e.getId() + "Nom : " + e.getName() + "Numéro de compte : " + e.getNbAccount());
             }
         });
     }

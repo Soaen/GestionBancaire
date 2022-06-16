@@ -18,10 +18,17 @@ public class Client extends Compte{
         this.email = email;
     }
 
+    public Client(int nbAccount, int codeAgency, int balance, Boolean overdraft, Client client, String id) {
+        super(nbAccount, codeAgency, balance, overdraft, client);
+        this.id = id;
+    }
+
     public String getId() {
         return id;
     }
-
+    public int getCodeAgency(){
+        return codeAgency;
+    }
     public String getName() {
         return name;
     }
