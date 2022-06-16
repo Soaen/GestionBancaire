@@ -1,6 +1,10 @@
 package fr.example.services;
 
+import java.util.Scanner;
+
 public class ServiceMenu {
+    int choix = 0;
+    Scanner sc = new Scanner(System.in);
     public void startingMenu(){
         System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * * * * *");
         System.out.println("*                                                     *");
@@ -22,5 +26,7 @@ public class ServiceMenu {
         System.out.println("*                                                     *");
         System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * * * * *");
         System.out.println("Entrez votre choix : ");
+        choix = sc.nextInt();
+        sc.nextLine();
     }
 }
