@@ -2,21 +2,23 @@ package fr.example.services;
 
 import java.util.Scanner;
 
-    public class AccountManagment {
-        Scanner sc = new Scanner(System.in);
-        int choix = 0;
-        public void creerCompte() {
-            System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * * * * *");
-            System.out.println("*                                                     *");
-            System.out.println("*     1. Créer un compte courant                      *");
-            System.out.println("*                                                     *");
-            System.out.println("*     2. Créer un livret A                            *");
-            System.out.println("*                                                     *");
-            System.out.println("*     3. Créer un plan épargne logement               *");
-            System.out.println("*                                                     *");
-            System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * * * * *");
-            System.out.println("Entrez votre choix : ");
+public class AccountManagment {
+    Scanner sc = new Scanner(System.in);
+    int choix = 0;
+
+    public void creerCompte() {
+            System.out.println("Quel type de compte voulez-vous créer ? ");
+            System.out.println("1 = Compte courant");
+            System.out.println("2 = Livret A");
+            System.out.println("3 = Plan Épargne Logement");
             choix = sc.nextInt();
-            sc.nextLine();
+            switch (choix) {
+                case 1:
+//              newCompteCourant
+                case 2:
+//              newLivretA
+                case 3:
+//              newPeLogement
+            }
         }
     }
