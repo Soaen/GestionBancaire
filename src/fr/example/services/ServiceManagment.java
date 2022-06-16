@@ -9,9 +9,9 @@ public class ServiceManagment {
         int choix = 0;
         switch (choix){
             case 1 :
-//                creerAgence
+                am.creerAgence();
             case 2 :
-//                creerClient
+                cm.creerClient();
             case 3 :
 //                creerCompteBancaire
             case 4 :
