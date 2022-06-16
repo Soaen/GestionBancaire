@@ -31,6 +31,6 @@ public class ServiceMenu {
             choix = sc.nextInt();
             sc.nextLine();
             sm.firstMenu(choix);
-        }while(choix !=8);
+        }while(choix != 8);
     }
 }

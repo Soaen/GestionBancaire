@@ -6,7 +6,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class ClientManagment {
     Scanner sc = new Scanner(System.in);
@@ -24,7 +23,6 @@ public class ClientManagment {
         String email = sc.nextLine();
         clientList.add(new Client(id, lastName, name, birthDate, email));
     }
-
 
     public void searchClient(){
         System.out.println("Quel est l'ID du client que vous recherchez ?");

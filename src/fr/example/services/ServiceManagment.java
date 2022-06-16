@@ -13,16 +13,24 @@ public class ServiceManagment {
                 break;
             case 3 :
 //                creerCompteBancaire
+                break;
             case 4 :
-                cm.searchClient();
+//              Recherche de compte
+                break;
             case 5 :
-//                rechercheClient
+                cm.searchClient();
+                break;
             case 6 :
 //                afficherCompteClient
+                break;
             case 7:
 //                imprimerInfoClient
+                break;
             case 8 :
 //                quitterProgramme
+                break;
+            default:
+                System.out.println("Le nombre doit être compris entre 1 et 8 !");
         }
     }
 }
