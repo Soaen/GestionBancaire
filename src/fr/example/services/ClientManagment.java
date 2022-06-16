@@ -29,7 +29,9 @@ public class ClientManagment {
         String id = sc.nextLine();
         clientList.forEach(e ->{
             if(Objects.equals(e.getId(), id)){
-                System.out.println("ID : " + e.getId() + "Nom : " + e.getName() + "Numéro de compte : " + e.getNbAccount());
+                System.out.println("ID : " + e.getId());
+                System.out.println("Nom : " + e.getName());
+                System.out.println("Numéro de compte : " + e.getNbAccount());
             }
         });
     }

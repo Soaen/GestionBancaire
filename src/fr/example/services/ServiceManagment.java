@@ -3,6 +3,7 @@ package fr.example.services;
 public class ServiceManagment {
     AgencyManagment am = new AgencyManagment();
     ClientManagment cm = new ClientManagment();
+    AccountManagment ac = new AccountManagment();
     public void firstMenu(int choix) {
         switch (choix){
             case 1 :
@@ -12,7 +13,7 @@ public class ServiceManagment {
                 cm.creerClient();
                 break;
             case 3 :
-//                creerCompteBancaire
+                ac.creerCompte();
                 break;
             case 4 :
 //              Recherche de compte
