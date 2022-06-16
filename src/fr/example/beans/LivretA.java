@@ -1,4 +1,6 @@
 package fr.example.beans;
 
-public class LivretA {
+import fr.example.interfaces.ILivretA;
+
+public class LivretA implements ILivretA {
 }

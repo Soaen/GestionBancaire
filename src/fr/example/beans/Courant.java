@@ -1,4 +1,7 @@
 package fr.example.beans;
 
-public class Courant {
+import fr.example.interfaces.ICourant;
+
+public class Courant implements ICourant {
+
 }

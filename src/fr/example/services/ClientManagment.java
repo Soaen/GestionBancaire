@@ -27,7 +27,7 @@ public class ClientManagment {
     public void searchClient(String id){
         clientList.forEach(e ->{
             if(e.getId() == id){
-                System.out.println("ID : " + e.getId() );
+                System.out.println("ID : " + e.getId() + "Nom : " + e.getName() + "Numéro de compte : ");
             }
         });
     }

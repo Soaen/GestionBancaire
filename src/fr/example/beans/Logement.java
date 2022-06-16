@@ -1,4 +1,6 @@
 package fr.example.beans;
 
-public class Logement {
+import fr.example.interfaces.ILogement;
+
+public class Logement implements ILogement {
 }
