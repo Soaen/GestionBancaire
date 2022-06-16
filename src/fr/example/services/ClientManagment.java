@@ -97,7 +97,13 @@ public class ClientManagment {
     }
 
 
-
-
+    public Client returnById(String id){
+        clientList.forEach(e ->{
+            if(e.getId().equals(id)){
+                return ;
+            }
+        });
+        return null;
+    }
 }
 
