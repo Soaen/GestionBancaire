@@ -3,14 +3,14 @@ package fr.example.beans;
 import java.time.LocalDate;
 
 public class Client extends Compte{
-    int id;
+    String id;
     String name;
     String surname;
     LocalDate birth;
     String email;
 
-    public Client(int nbAccount, int codeAgency, int balance, Boolean overdraft, int id, String name, String surname, LocalDate birth, String email) {
-        super(nbAccount, codeAgency, balance, overdraft);
+    public Client(String id, String name, String surname, LocalDate birth, String email){
+        super();
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -18,5 +18,12 @@ public class Client extends Compte{
         this.email = email;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
 
 }

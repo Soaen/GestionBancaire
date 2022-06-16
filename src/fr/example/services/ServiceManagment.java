@@ -1,17 +1,16 @@
 package fr.example.services;
 
-import java.util.Scanner;
-
 public class ServiceManagment {
     AgencyManagment am = new AgencyManagment();
     ClientManagment cm = new ClientManagment();
-    public void firstMenu() {
-        int choix = 0;
+    public void firstMenu(int choix) {
         switch (choix){
             case 1 :
                 am.creerAgence();
+                break;
             case 2 :
                 cm.creerClient();
+                break;
             case 3 :
 //                creerCompteBancaire
             case 4 :

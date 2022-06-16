@@ -12,4 +12,8 @@ public class Compte {
         this.balance = balance;
         this.overdraft = overdraft;
     }
+
+    public Compte() {
+
+    }
 }
