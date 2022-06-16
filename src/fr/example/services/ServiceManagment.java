@@ -25,10 +25,10 @@ public class ServiceManagment {
 //                afficherCompteClient
                 break;
             case 7:
-//                imprimerInfoClient
+                cm.infoClient();
                 break;
             case 8 :
-//                quitterProgramme
+                System.out.println("Au revoir !");
                 break;
             default:
                 System.out.println("Le nombre doit être compris entre 1 et 8 !");

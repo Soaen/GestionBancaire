@@ -2,6 +2,10 @@ package fr.example.services;
 
 import fr.example.beans.Client;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -10,6 +14,8 @@ import java.util.Scanner;
 public class ClientManagment {
     Scanner sc = new Scanner(System.in);
     ArrayList<Client> clientList = new ArrayList<>();
+
+
     public void creerClient() {
         System.out.println("Identifiant Client : ");
         String id = sc.nextLine();
@@ -35,4 +41,39 @@ public class ClientManagment {
             }
         });
     }
+
+    public void infoClient(){
+        System.out.println("Quel est l'ID du client que vous recherchez ?");
+        String id = sc.nextLine();
+        clientList.forEach(e ->{
+            if(Objects.equals(e.getId(), id)){
+                try{
+                    FileWriter myClient = new FileWriter("client.txt");
+                    PrintWriter out = new PrintWriter(myClient);
+                    out.println("                      Fiche client");
+                    out.println("Numéro client : " + e.getId());
+                    out.println("Nom : " + e.getName());
+                    out.println("Prénom : " + e.getSurname());
+                    out.println("Date de naissance : " + e.getBirth());
+                    out.println();
+                    out.println("__________________________________________________________________________");
+                    out.println("Liste de compte");
+                    out.println("__________________________________________________________________________");
+                    out.println("Numéro de compte                           Solde");
+                    out.println("__________________________________________________________________________");
+                    out.println("En cours");
+                    out.close();
+                    System.out.println("Fichier télécharger !");
+                } catch (IOException s) {
+                    System.out.println("An error occurred.");
+                    s.printStackTrace();
+                }
+            }
+        });
+    }
+
+
+
+
 }
+

@@ -33,4 +33,15 @@ public class Client extends Compte{
         return name;
     }
 
+    public String getSurname() {
+        return surname;
+    }
+
+    public LocalDate getBirth() {
+        return birth;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 }
