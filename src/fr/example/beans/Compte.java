@@ -1,13 +1,13 @@
 package fr.example.beans;
 
 public class Compte {
-    int nbAccount;
+    float nbAccount;
     int codeAgency;
     int balance;
     Client client;
     boolean overdraft;
 
-    public Compte(int nbAccount, int codeAgency, int balance, boolean overdraft, Client client) {
+    public Compte(float nbAccount, int codeAgency, int balance, boolean overdraft, Client client) {
         this.nbAccount = nbAccount;
         this.codeAgency = codeAgency;
         this.balance = balance;
@@ -16,7 +16,7 @@ public class Compte {
     }
 
 
-    public int getNbAccount() {
+    public float getNbAccount() {
         return nbAccount;
     }
 

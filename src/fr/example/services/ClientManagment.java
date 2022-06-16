@@ -46,7 +46,7 @@ public class ClientManagment {
         System.out.println("Quel est l'ID du client que vous recherchez ?");
         String id = sc.nextLine();
         clientList.forEach(e ->{
-            if(Objects.equals(e.getId(), id)){
+            if((e.getId().equals(id))){
                 try{
                     FileWriter myClient = new FileWriter("client.txt");
                     PrintWriter out = new PrintWriter(myClient);
@@ -62,6 +62,12 @@ public class ClientManagment {
                     out.println("Numéro de compte                           Solde");
                     out.println("__________________________________________________________________________");
                     out.println("En cours");
+                    out.println(e.getNbAccount() + e.getBalance()                     );
+                    if(e.getBalance() > 0){
+                        out.print(":-)");
+                    }else{
+                        out.print(":-(");
+                    }
                     out.close();
                     System.out.println("Fichier télécharger !");
                 } catch (IOException s) {

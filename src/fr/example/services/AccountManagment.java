@@ -14,11 +14,9 @@ public class AccountManagment {
 
     public void creerCompte() {
         System.out.println("Numéro de compte : ");
-        int nbAccount = sc.nextInt();
-        sc.nextLine();
+        float nbAccount = sc.nextInt();
         System.out.println("Code Agence : ");
         int agencyCode = sc.nextInt();
-        sc.nextLine();
         System.out.println("Solde : ");
         int balance = sc.nextInt();
         sc.nextLine();

@@ -21,10 +21,14 @@ public class Client extends Compte{
     public Client(int nbAccount, int codeAgency, int balance, Boolean overdraft, Client client, String id) {
         super(nbAccount, codeAgency, balance, overdraft, client);
         this.id = id;
+        this.balance = balance;
     }
 
     public String getId() {
         return id;
+    }
+    public int getBalance(){
+        return balance;
     }
     public int getCodeAgency(){
         return codeAgency;
