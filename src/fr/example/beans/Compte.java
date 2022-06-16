@@ -20,5 +20,21 @@ public class Compte {
         return nbAccount;
     }
 
+    public int getCodeAgency() {
+        return codeAgency;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public boolean isOverdraft() {
+        return overdraft;
+    }
+
     public Compte() {}
 }

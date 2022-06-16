@@ -79,6 +79,24 @@ public class ClientManagment {
     }
 
 
+    public void listClient(){
+        System.out.println("Quel est l'ID du client que vous souhaitez vois les comptes ?");
+        String id = sc.nextLine();
+        clientList.forEach(e -> {
+            if(e.getId().equals(id)){
+                System.out.println("Numéro de compte");
+                System.out.println(e.getNbAccount());
+                System.out.println("Solde de compte");
+                System.out.println(e.getBalance());
+                System.out.println("Code Agence");
+                System.out.println(e.getCodeAgency());
+                System.out.println("Découvert");
+                System.out.println(e.isOverdraft() ? "Accepté" : "Refusé");
+            }
+        });
+    }
+
+
 
 
 }

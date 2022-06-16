@@ -16,14 +16,14 @@ public class ServiceManagment {
                 ac.creerCompte();
                 break;
             case 4 :
-//              Recherche de compte
+                ac.searchAccount();
                 break;
             case 5 :
                 cm.searchClient();
                 break;
             case 6 :
-//                afficherCompteClient
-                break;
+              cm.listClient();
+              break;
             case 7:
                 cm.infoClient();
                 break;

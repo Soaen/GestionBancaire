@@ -4,7 +4,6 @@ import fr.example.beans.Compte;
 
 
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class AccountManagment {
@@ -47,5 +46,21 @@ public class AccountManagment {
             default :
                 System.out.println("Entrez un chiffre entre 1 et 3 !");
         }
+    }
+
+
+    public void searchAccount(){
+        System.out.println("Quel est l'ID du compte ?");
+        String id = sc.nextLine();
+        accountList.forEach(e -> {
+            System.out.println("Numéro de compte : ");
+            System.out.print(e.getNbAccount());
+            System.out.println("Code de l'agence : ");
+            System.out.print(e.getCodeAgency());
+            System.out.println("Solde : ");
+            System.out.print(e.getBalance());
+            System.out.println("Client : ");
+            System.out.print(e.getClient());
+        });
     }
 }
