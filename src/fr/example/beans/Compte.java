@@ -5,9 +5,9 @@ public class Compte {
     int codeAgency;
     int balance;
     Client client;
-    Boolean overdraft;
+    boolean overdraft;
 
-    public Compte(int nbAccount, int codeAgency, int balance, Boolean overdraft, Client client) {
+    public Compte(int nbAccount, int codeAgency, int balance, boolean overdraft, Client client) {
         this.nbAccount = nbAccount;
         this.codeAgency = codeAgency;
         this.balance = balance;
