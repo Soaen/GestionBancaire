@@ -30,7 +30,9 @@ public class AccountManagment {
             tooMuch = sc.nextLine();
         }
         boolean overdraft = tooMuch.equals("O");
+
         Client client = searchClient();
+
         System.out.println("Quel type de compte voulez-vous créer ? ");
         System.out.println("1 = Compte courant");
         System.out.println("2 = Livret A");
@@ -68,9 +70,9 @@ public class AccountManagment {
     public Client searchClient(){
         System.out.println("quel est l'id du client du compte ?");
         String id = sc.nextLine();
-
-
         for(Client account : cm.clientList) {
+            System.out.println(account.getId());
+            System.out.println(id);
             if(account.getId().equals(id)) {
                 return account;
             }

@@ -15,11 +15,6 @@ public class Compte {
         this.client = client;
     }
 
-
-    public float getNbAccount() {
-        return nbAccount;
-    }
-
     public int getCodeAgency() {
         return codeAgency;
     }
@@ -35,4 +30,7 @@ public class Compte {
     public Compte() {}
 
 
+    public float getNbAccount() {
+        return nbAccount;
+    }
 }

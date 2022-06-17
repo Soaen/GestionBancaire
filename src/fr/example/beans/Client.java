@@ -23,6 +23,10 @@ public class Client extends Compte{
         this.id = id;
     }
 
+    public float getNbAccount() {
+        return nbAccount;
+    }
+
     public String getId() {
         return id;
     }
