@@ -11,6 +11,7 @@ public class AccountManagment {
     ClientManagment cm = new ClientManagment();
     Scanner sc = new Scanner(System.in);
     int choix = 0;
+    boolean i = false;
 
 
     public void creerCompte() {
@@ -64,17 +65,16 @@ public class AccountManagment {
             System.out.print(e.getClient());
         });
     }
-
     public Client searchClient(){
         System.out.println("quel est l'id du client du compte ?");
         String id = sc.nextLine();
+
+
         for(Client account : cm.clientList) {
             if(account.getId().equals(id)) {
                 return account;
             }
         }
-        System.out.println("Cette personne n'existe pas !");
-        searchClient();
         return null;
     }
 }
