@@ -29,7 +29,7 @@ public class Compte {
     }
 
     public String getClient() {
-        return client.toString();
+        return client.getName();
     }
 
     public boolean isOverdraft() {
