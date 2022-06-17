@@ -97,14 +97,11 @@ public class ClientManagment {
 
     public void listAllClient(){
         clientList.forEach(e -> {
-            System.out.println("Numéro de compte");
-            System.out.println(e.getNbAccount());
-            System.out.println("Solde de compte");
-            System.out.println(e.getBalance());
-            System.out.println("Code Agence");
-            System.out.println(e.getCodeAgency());
-            System.out.println("Découvert");
-            System.out.println(e.isOverdraft() ? "Accepté" : "Refusé");
+            System.out.println("ID : " + e.getId());
+            System.out.println("Nom : " + e.getName());
+            System.out.println("Prénom : " + e.getSurname());
+            System.out.println("Date de Naissance : " + e.getBirth());
+            System.out.println("E-Mail : " + e.getEmail());
         });
     }
 }
