@@ -39,7 +39,7 @@ public class ClientManagment {
             if (Objects.equals(e.getId(), id)) {
                 System.out.println("ID : " + e.getId());
                 System.out.println("Nom : " + e.getName());
-                System.out.println("Numéro de compte : " + am.getAccount(e));
+                System.out.println("Numéro de compte : " + e.getNbAccount());
             }
         });
     }

@@ -67,8 +67,5 @@ public class AccountManagment {
             }
         });
     }
-    public float getAccount(Client e){
-        return e.getNbAccount();
-    }
 }
 

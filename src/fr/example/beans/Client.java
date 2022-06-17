@@ -18,10 +18,6 @@ public class Client extends Compte{
         this.email = email;
     }
 
-    public Client(float nbAccount, int codeAgency, int balance, boolean overdraft, Client client) {
-        super(nbAccount, codeAgency, balance, overdraft, client);
-    }
-
     public String getId() {
         return id;
     }
@@ -40,8 +36,5 @@ public class Client extends Compte{
 
     public String getEmail() {
         return email;
-    }
-    public float getNbAccount(){
-        return nbAccount;
     }
 }
