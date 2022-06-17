@@ -14,7 +14,6 @@ import java.util.Scanner;
 
 public class ClientManagment {
     Scanner sc = new Scanner(System.in);
-    AccountManagment am = new AccountManagment();
     public ArrayList<Client> clientList = new ArrayList<>();
 
 

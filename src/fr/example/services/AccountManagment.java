@@ -11,7 +11,6 @@ public class AccountManagment {
     ClientManagment cm = new ClientManagment();
     Scanner sc = new Scanner(System.in);
     int choix = 0;
-    public Client test;
 
 
     public void creerCompte() {
