@@ -29,7 +29,6 @@ public class AccountManagment {
             tooMuch = sc.nextLine();
         }
         boolean overdraft = tooMuch.equals("O");
-        sc.nextLine();
         Client client = searchClient();
         System.out.println("Quel type de compte voulez-vous créer ? ");
         System.out.println("1 = Compte courant");
@@ -75,6 +74,7 @@ public class AccountManagment {
             }
         }
         System.out.println("Cette personne n'existe pas !");
+        searchClient();
         return null;
     }
 }
