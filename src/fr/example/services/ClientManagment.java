@@ -23,7 +23,7 @@ public class ClientManagment {
         String lastName = sc.nextLine();
         System.out.println("Prénom du client : ");
         String name = sc.nextLine();
-        System.out.println("Date de naissance : (Format: yyyy-MM-dd");
+        System.out.println("Date de naissance : (Format: yyyy-MM-dd)");
         LocalDate birthDate = LocalDate.parse(sc.nextLine());
         System.out.println("Email du client : ");
         String email = sc.nextLine();
