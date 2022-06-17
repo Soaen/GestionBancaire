@@ -28,14 +28,13 @@ public class ClientManagment {
         System.out.println("Email du client : ");
         String email = sc.nextLine();
         clientList.add(new Client(id, lastName, name, birthDate, email));
-        System.out.println(clientList.size());
     }
 
-    public void searchClient(){
+    public void searchClient() {
         System.out.println("Quel est l'ID du client que vous recherchez ?");
         String id = sc.nextLine();
-        clientList.forEach(e ->{
-            if(Objects.equals(e.getId(), id)){
+        clientList.forEach(e -> {
+            if (Objects.equals(e.getId(), id)) {
                 System.out.println("ID : " + e.getId());
                 System.out.println("Nom : " + e.getName());
                 System.out.println("Numéro de compte : " + e.getNbAccount());
@@ -43,12 +42,12 @@ public class ClientManagment {
         });
     }
 
-    public void infoClient(){
+    public void infoClient() {
         System.out.println("Quel est l'ID du client que vous recherchez ?");
         String id = sc.nextLine();
-        clientList.forEach(e ->{
-            if((e.getId().equals(id))){
-                try{
+        clientList.forEach(e -> {
+            if ((e.getId().equals(id))) {
+                try {
                     FileWriter myClient = new FileWriter("client.txt");
                     PrintWriter out = new PrintWriter(myClient);
                     out.println("                      Fiche client");
@@ -63,10 +62,10 @@ public class ClientManagment {
                     out.println("Numéro de compte                           Solde");
                     out.println("__________________________________________________________________________");
                     out.println("En cours");
-                    out.println(e.getNbAccount() + e.getBalance()                     );
-                    if(e.getBalance() > 0){
+                    out.println(e.getNbAccount() + e.getBalance());
+                    if (e.getBalance() > 0) {
                         out.print(":-)");
-                    }else{
+                    } else {
                         out.print(":-(");
                     }
                     out.close();
@@ -79,11 +78,11 @@ public class ClientManagment {
         });
     }
 
-    public void listClient(){
+    public void listClient() {
         System.out.println("Quel est l'ID du client que vous souhaitez vois les comptes ?");
         String id = sc.nextLine();
         clientList.forEach(e -> {
-            if(e.getId().equals(id)){
+            if (e.getId().equals(id)) {
                 System.out.println("Numéro de compte");
                 System.out.println(e.getNbAccount());
                 System.out.println("Solde de compte");
@@ -96,7 +95,7 @@ public class ClientManagment {
         });
     }
 
-    public void listAllClient(){
+    public void listAllClient() {
         clientList.forEach(e -> {
             System.out.println("ID : " + e.getId());
             System.out.println("Nom : " + e.getName());
@@ -107,18 +106,24 @@ public class ClientManagment {
     }
 
     public Client searchClient(String id) {
-        System.out.println("test 1");
-        for (int j = 0; j < clientList.size()+1; j++) {
-            System.out.println("test 2");
-            System.out.println(id);
-            System.out.println(clientList.size());
-            System.out.println(clientList.get(j));
-            if (clientList.get(j).getId().equals(id)) {
-                System.out.println("yo");
-                return clientList.get(j);
+        for (Client client : clientList) {
+            if (client.getId().equals(id)) {
+                return client;
             }
         }
         return null;
     }
 }
+
+//        System.out.println("test 1");
+//        for (int j = 0; j < clientList.size()+1; j++) {
+//            System.out.println("test 2");
+//            System.out.println(id);
+//            System.out.println(clientList.size());
+//            if (clientList.get(j).getId().equals(id)) {
+//                System.out.println("yo");
+//                return clientList.get(j);
+//            }
+//        }
+
 
