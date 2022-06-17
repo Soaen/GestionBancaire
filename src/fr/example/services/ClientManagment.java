@@ -31,6 +31,9 @@ public class ClientManagment {
         clientList.add(new Client(id, lastName, name, birthDate, email));
     }
 
+
+
+
     public void searchClient() {
         System.out.println("Quel est l'ID du client que vous recherchez ?");
         String id = sc.nextLine();
@@ -38,10 +41,11 @@ public class ClientManagment {
             if (Objects.equals(e.getId(), id)) {
                 System.out.println("ID : " + e.getId());
                 System.out.println("Nom : " + e.getName());
-                System.out.println("Numéro de compte : " + e.getNbAccount());
+                System.out.println("Numéro de compte : " + AccountManagment.getAccountNb(e));
             }
         });
     }
+
 
     public void infoClient() {
         System.out.println("Quel est l'ID du client que vous recherchez ?");

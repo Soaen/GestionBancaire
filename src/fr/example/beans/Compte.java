@@ -32,4 +32,6 @@ public class Compte {
     public float getNbAccount() {
         return nbAccount;
     }
+
+
 }

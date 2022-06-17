@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AccountManagment {
-    ArrayList<Compte> accountList = new ArrayList<>();
+    static ArrayList<Compte> accountList = new ArrayList<>();
     ClientManagment cm = new ClientManagment();
     Scanner sc = new Scanner(System.in);
     int choix = 0;
@@ -65,6 +65,16 @@ public class AccountManagment {
                 System.out.println(e.getBalance());
             }
         });
+    }
+
+    public static float getAccountNb(Client e){
+        for (Compte compte : accountList) {
+                if (compte.getNbAccount() == e.getNbAccount()) {
+                    return compte.getNbAccount();
+
+            }
+        }
+        return 0;
     }
 }
 
