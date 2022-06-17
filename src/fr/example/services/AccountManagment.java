@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class AccountManagment {
     static ArrayList<Compte> accountList = new ArrayList<>();
     ClientManagment cm = new ClientManagment();
+    static Compte c = new Compte();
     Scanner sc = new Scanner(System.in);
     int choix = 0;
 
@@ -71,10 +72,8 @@ public class AccountManagment {
         for (Compte compte : accountList) {
                 if (compte.getNbAccount() == e.getNbAccount()) {
                     return compte.getNbAccount();
-
             }
         }
-        return 0;
+        return c.getNbAccount();
     }
 }
-
