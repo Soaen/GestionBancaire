@@ -28,8 +28,8 @@ public class Compte {
         return balance;
     }
 
-    public Client getClient() {
-        return client;
+    public String getClient() {
+        return client.toString();
     }
 
     public boolean isOverdraft() {

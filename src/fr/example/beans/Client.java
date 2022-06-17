@@ -45,7 +45,4 @@ public class Client extends Compte{
         return birth;
     }
 
-    public String getEmail() {
-        return email;
-    }
 }

@@ -57,13 +57,13 @@ public class AccountManagment {
         accountList.forEach(e -> {
             if(e.getNbAccount() == id){
                 System.out.println("Numéro de compte : ");
-                System.out.print(e.getNbAccount());
+                System.out.println(e.getNbAccount());
                 System.out.println("Code de l'agence : ");
-                System.out.print(e.getCodeAgency());
+                System.out.println(e.getCodeAgency());
                 System.out.println("Solde : ");
-                System.out.print(e.getBalance());
+                System.out.println(e.getBalance());
                 System.out.println("Client : ");
-                System.out.print(e.getClient());
+                System.out.println(e.getClient());
             }
         });
     }
