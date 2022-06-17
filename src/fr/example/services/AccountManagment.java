@@ -15,7 +15,7 @@ public class AccountManagment {
 
     public void searchClient(String id) {
         System.out.println("test 1");
-        for (int j = 0; j < cm.clientList.size() + 1; j++) {
+        for (int j = 0; j < cm.clientList.size(); j++) {
             System.out.println("test 2");
             System.out.println(id);
             System.out.println(cm.clientList.get(j));
