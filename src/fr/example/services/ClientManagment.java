@@ -1,6 +1,7 @@
 package fr.example.services;
 
 import fr.example.beans.Client;
+import fr.example.beans.Compte;
 
 import java.io.File;
 import java.io.FileWriter;

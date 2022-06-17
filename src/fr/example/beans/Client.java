@@ -8,6 +8,7 @@ public class Client extends Compte{
     String surname;
     LocalDate birth;
     String email;
+    Compte compte = new Compte();
 
     public Client(String id, String name, String surname, LocalDate birth, String email){
         super();
@@ -16,10 +17,6 @@ public class Client extends Compte{
         this.surname = surname;
         this.birth = birth;
         this.email = email;
-    }
-
-    public Client(float nbAccount, int codeAgency, int balance, Boolean overdraft, Client client) {
-        super(nbAccount, codeAgency, balance, overdraft, client);
     }
 
     public String getId() {
@@ -34,12 +31,14 @@ public class Client extends Compte{
         return surname;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
     public LocalDate getBirth() {
         return birth;
     }
 
+    public String getEmail() {
+        return email;
+    }
+    public float getNbAccount(){
+        return client.getNbAccount();
+    }
 }
