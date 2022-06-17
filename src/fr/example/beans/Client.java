@@ -18,7 +18,7 @@ public class Client extends Compte{
         this.email = email;
     }
 
-    public Client(float nbAccount, int codeAgency, int balance, Boolean overdraft, Client client, String id) {
+    public Client(float nbAccount, int codeAgency, int balance, Boolean overdraft, Client client) {
         super(nbAccount, codeAgency, balance, overdraft, client);
     }
 
