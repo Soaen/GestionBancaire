@@ -38,13 +38,13 @@ public class AccountManagment {
         choix = sc.nextInt();
         switch (choix) {
             case 1:
-                new Courant(nbAccount, agencyCode, balance, overdraft, client);
+                accountList.add(new Courant(nbAccount, agencyCode, balance, overdraft, client));
                 break;
             case 2 :
-                new LivretA(nbAccount, agencyCode, balance, overdraft, client);
+                accountList.add(new LivretA(nbAccount, agencyCode, balance, overdraft, client));
                 break;
             case 3 :
-                new Logement(nbAccount, agencyCode, balance, overdraft, client);
+                accountList.add(new Logement(nbAccount, agencyCode, balance, overdraft, client));
                 break;
             default :
                 System.out.println("Entrez un chiffre entre 1 et 3 !");
@@ -53,16 +53,18 @@ public class AccountManagment {
 
     public void searchAccount(){
         System.out.println("Quel est l'ID du compte ?");
-        String id = sc.nextLine();
+        float id = sc.nextFloat();
         accountList.forEach(e -> {
-            System.out.println("Numéro de compte : ");
-            System.out.print(e.getNbAccount());
-            System.out.println("Code de l'agence : ");
-            System.out.print(e.getCodeAgency());
-            System.out.println("Solde : ");
-            System.out.print(e.getBalance());
-            System.out.println("Client : ");
-            System.out.print(e.getClient());
+            if(e.getNbAccount() == id){
+                System.out.println("Numéro de compte : ");
+                System.out.print(e.getNbAccount());
+                System.out.println("Code de l'agence : ");
+                System.out.print(e.getCodeAgency());
+                System.out.println("Solde : ");
+                System.out.print(e.getBalance());
+                System.out.println("Client : ");
+                System.out.print(e.getClient());
+            }
         });
     }
     public Client searchClient(){

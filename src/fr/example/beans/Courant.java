@@ -5,8 +5,11 @@ import fr.example.interfaces.ICourant;
 public class Courant extends Compte implements ICourant  {
     public Courant(float nbAccount, int codeAgency, int balance, boolean overdraft, Client client) {
         super(nbAccount, codeAgency, balance, overdraft, client);
+        this.nbAccount = nbAccount;
     }
-
+    public float getId(){
+        return nbAccount;
+    }
     public void fraisTenueCompte(){
         balance -= 25;
         System.out.println("25€ ont été retiré comme frais de tenue !");
