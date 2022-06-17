@@ -11,7 +11,7 @@ public class AccountManagment {
     ClientManagment cm = new ClientManagment();
     Scanner sc = new Scanner(System.in);
     int choix = 0;
-    boolean i = false;
+    public Client test;
 
 
     public void creerCompte() {
@@ -24,15 +24,16 @@ public class AccountManagment {
         sc.nextLine();
         System.out.println("Découvert autorisé O/N : ");
         String tooMuch = sc.nextLine();
-        while(!tooMuch.equals("O") && !tooMuch.equals("N")){
+        while (!tooMuch.equals("O") && !tooMuch.equals("N")) {
             System.out.println("Merci d'écrire 'O' ou 'N' !");
             System.out.println("Découvert autorisé O/N : ");
             tooMuch = sc.nextLine();
         }
         boolean overdraft = tooMuch.equals("O");
-
-        Client client = searchClient();
-
+        System.out.println("quel est l'id du client du compte ?");
+        String id = sc.nextLine();
+        searchClient(id);
+        Client client = test;
         System.out.println("Quel type de compte voulez-vous créer ? ");
         System.out.println("1 = Compte courant");
         System.out.println("2 = Livret A");
@@ -42,22 +43,22 @@ public class AccountManagment {
             case 1:
                 accountList.add(new Courant(nbAccount, agencyCode, balance, overdraft, client));
                 break;
-            case 2 :
+            case 2:
                 accountList.add(new LivretA(nbAccount, agencyCode, balance, overdraft, client));
                 break;
-            case 3 :
+            case 3:
                 accountList.add(new Logement(nbAccount, agencyCode, balance, overdraft, client));
                 break;
-            default :
+            default:
                 System.out.println("Entrez un chiffre entre 1 et 3 !");
         }
     }
 
-    public void searchAccount(){
+    public void searchAccount() {
         System.out.println("Quel est l'ID du compte ?");
         float id = sc.nextFloat();
         accountList.forEach(e -> {
-            if(e.getNbAccount() == id){
+            if (e.getNbAccount() == id) {
                 System.out.println("Numéro de compte : ");
                 System.out.println(e.getNbAccount());
                 System.out.println("Code de l'agence : ");
@@ -67,16 +68,13 @@ public class AccountManagment {
             }
         });
     }
-    public Client searchClient(){
-        System.out.println("quel est l'id du client du compte ?");
-        String id = sc.nextLine();
-        for(Client account : cm.clientList) {
-            System.out.println(account.getId());
-            System.out.println(id);
-            if(account.getId().equals(id)) {
-                return account;
+
+    public void searchClient(String id) {
+        for (int j = 0; j < cm.clientList.size(); j++) {
+            if (cm.clientList.get(j).getId().equals(id)) {
+                test = cm.clientList.get(j);
             }
         }
-        return null;
     }
 }
+
