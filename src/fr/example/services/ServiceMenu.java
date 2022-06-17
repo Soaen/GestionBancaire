@@ -26,13 +26,15 @@ public class ServiceMenu {
             System.out.println("*                                                     *");
             System.out.println("*     8. Afficher la liste des Agences                *");
             System.out.println("*                                                     *");
-            System.out.println("*     9. Quitter le programme                         *");
+            System.out.println("*     9. Afficher la liste des Clients                *");
+            System.out.println("*                                                     *");
+            System.out.println("*     10. Quitter le programme                         *");
             System.out.println("*                                                     *");
             System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * * * * *");
             System.out.println("Entrez votre choix : ");
             choix = sc.nextInt();
             sc.nextLine();
             sm.firstMenu(choix);
-        }while(choix != 9);
+        }while(choix != 10);
     }
 }

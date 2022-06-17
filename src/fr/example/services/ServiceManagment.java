@@ -30,7 +30,10 @@ public class ServiceManagment {
             case 8:
                 am.listAgence();
                 break;
-            case 9 :
+            case 9:
+                cm.listAllClient();
+                break;
+            case 10 :
                 System.out.println("Au revoir !");
                 break;
             default:
