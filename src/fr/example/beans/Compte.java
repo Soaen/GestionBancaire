@@ -29,7 +29,6 @@ public class Compte {
 
     public Compte() {}
 
-
     public float getNbAccount() {
         return nbAccount;
     }
