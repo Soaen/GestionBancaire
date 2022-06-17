@@ -13,7 +13,16 @@ public class AccountManagment {
     int choix = 0;
     public Client test;
 
-
+    public void searchClient(String id) {
+        for (int j = 0; j < cm.clientList.size(); j++) {
+            System.out.println(cm.clientList.get(j).getId());
+            System.out.println(id);
+            if (cm.clientList.get(j).getId().equals(id)) {
+                System.out.println("yo");
+                test = cm.clientList.get(j);
+            }
+        }
+    }
     public void creerCompte() {
         System.out.println("Numéro de compte : ");
         float nbAccount = sc.nextFloat();
@@ -67,17 +76,6 @@ public class AccountManagment {
                 System.out.println(e.getBalance());
             }
         });
-    }
-
-    public void searchClient(String id) {
-        for (int j = 0; j < cm.clientList.size(); j++) {
-            System.out.println(cm.clientList.get(j).getId());
-            System.out.println(id);
-            if (cm.clientList.get(j).getId().equals(id)) {
-                System.out.println("yo");
-                test = cm.clientList.get(j);
-            }
-        }
     }
 }
 
