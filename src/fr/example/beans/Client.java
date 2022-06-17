@@ -22,19 +22,10 @@ public class Client extends Compte{
         super(nbAccount, codeAgency, balance, overdraft, client);
     }
 
-    public float getNbAccount() {
-        return nbAccount;
-    }
-
     public String getId() {
         return id;
     }
-    public int getBalance(){
-        return balance;
-    }
-    public int getCodeAgency(){
-        return codeAgency;
-    }
+
     public String getName() {
         return name;
     }
