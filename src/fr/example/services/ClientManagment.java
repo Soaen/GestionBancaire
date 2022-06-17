@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class ClientManagment {
     Scanner sc = new Scanner(System.in);
-    public ArrayList<Client> clientList = new ArrayList<>();
+    public static ArrayList<Client> clientList = new ArrayList<>();
 
 
     public void creerClient() {
