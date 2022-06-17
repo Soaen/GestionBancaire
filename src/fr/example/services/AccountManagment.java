@@ -62,8 +62,6 @@ public class AccountManagment {
                 System.out.println(e.getCodeAgency());
                 System.out.println("Solde : ");
                 System.out.println(e.getBalance());
-                System.out.println("Client : ");
-                System.out.println(e.getClient());
             }
         });
     }
