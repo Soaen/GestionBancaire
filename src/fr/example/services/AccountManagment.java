@@ -15,6 +15,7 @@ public class AccountManagment {
     private ClientManagment clientm;
 
     public void searchClient(String id) {
+        System.out.println(clientm.getClientList());
         System.out.println("test 1");
         clientm = new ClientManagment();
         ArrayList<Client> clientList = clientm.getClientList();
