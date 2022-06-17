@@ -15,10 +15,10 @@ public class AccountManagment {
 
     public void searchClient(String id) {
         System.out.println("test 1");
-        for (int j = 0; j < cm.clientList.size()+1; j++) {
+        for (int j = 0; j < cm.clientList.size() + 1; j++) {
             System.out.println("test 2");
-            System.out.println(cm.clientList.get(j).getId());
             System.out.println(id);
+            System.out.println(cm.clientList.get(j));
             if (cm.clientList.get(j).getId().equals(id)) {
                 System.out.println("yo");
                 test = cm.clientList.get(j);
