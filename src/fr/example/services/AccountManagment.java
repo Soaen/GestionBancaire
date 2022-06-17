@@ -11,7 +11,7 @@ public class AccountManagment {
     ClientManagment cm = new ClientManagment();
     Scanner sc = new Scanner(System.in);
     int choix = 0;
-    public Client client = null;
+
 
     public void creerCompte() {
         System.out.println("Numéro de compte : ");
@@ -30,27 +30,19 @@ public class AccountManagment {
         }
         boolean overdraft = tooMuch.equals("O");
         sc.nextLine();
-        searchClient();
+        Client client = searchClient();
         System.out.println("Quel type de compte voulez-vous créer ? ");
         System.out.println("1 = Compte courant");
         System.out.println("2 = Livret A");
         System.out.println("3 = Plan Épargne Logement");
         choix = sc.nextInt();
         switch (choix) {
-            case 1:
-                new Courant(nbAccount, agencyCode, balance, overdraft, client);
-                break;
-            case 2 :
-                new LivretA(nbAccount, agencyCode, balance, overdraft, client);
-                break;
-            case 3 :
-                new Logement(nbAccount, agencyCode, balance, overdraft, client);
-                break;
-            default :
-                System.out.println("Entrez un chiffre entre 1 et 3 !");
+            case 1 -> new Courant(nbAccount, agencyCode, balance, overdraft, client);
+            case 2 -> new LivretA(nbAccount, agencyCode, balance, overdraft, client);
+            case 3 -> new Logement(nbAccount, agencyCode, balance, overdraft, client);
+            default -> System.out.println("Entrez un chiffre entre 1 et 3 !");
         }
     }
-
 
     public void searchAccount(){
         System.out.println("Quel est l'ID du compte ?");
@@ -67,18 +59,15 @@ public class AccountManagment {
         });
     }
 
-    public void searchClient(){
+    public Client searchClient(){
         System.out.println("quel est l'id du client du compte ?");
         String id = sc.nextLine();
         for(Client account : cm.clientList) {
             if(account.getId().equals(id)) {
-                client = account;
+                return account;
             }
         }
-        while (client.equals(null)){
-            System.out.println("Ce Client n'existe pas !");
-            searchClient();
-        }
+        System.out.println("Cette personne n'existe pas !");
+        return null;
     }
-
 }
