@@ -104,5 +104,8 @@ public class ClientManagment {
             System.out.println("E-Mail : " + e.getEmail());
         });
     }
+    public ArrayList<Client> getClientList(){
+        return clientList;
+    }
 }
 

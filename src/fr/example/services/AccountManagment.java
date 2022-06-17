@@ -13,15 +13,17 @@ public class AccountManagment {
     int choix = 0;
     public Client test;
 
+
     public void searchClient(String id) {
         System.out.println("test 1");
-        for (int j = 0; j < cm.clientList.size(); j++) {
+        ArrayList<Client> clientList = cm.getClientList();
+        for (int j = 0; j < clientList.size()+1; j++) {
             System.out.println("test 2");
             System.out.println(id);
-            System.out.println(cm.clientList.get(j));
-            if (cm.clientList.get(j).getId().equals(id)) {
+            System.out.println(clientList.get(j));
+            if (clientList.get(j).getId().equals(id)) {
                 System.out.println("yo");
-                test = cm.clientList.get(j);
+                test = clientList.get(j);
             }
         }
     }
