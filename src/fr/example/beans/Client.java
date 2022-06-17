@@ -20,7 +20,6 @@ public class Client extends Compte{
 
     public Client(float nbAccount, int codeAgency, int balance, Boolean overdraft, Client client, String id) {
         super(nbAccount, codeAgency, balance, overdraft, client);
-        this.id = id;
     }
 
     public float getNbAccount() {
