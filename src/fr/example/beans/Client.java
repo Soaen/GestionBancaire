@@ -39,6 +39,6 @@ public class Client extends Compte{
         return email;
     }
     public float getNbAccount(){
-        return client.getNbAccount();
+        return compte.getNbAccount();
     }
 }
