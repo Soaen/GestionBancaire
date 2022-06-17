@@ -31,9 +31,6 @@ public class ClientManagment {
         clientList.add(new Client(id, lastName, name, birthDate, email));
     }
 
-
-
-
     public void searchClient() {
         System.out.println("Quel est l'ID du client que vous recherchez ?");
         String id = sc.nextLine();
