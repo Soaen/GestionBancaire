@@ -28,6 +28,7 @@ public class ClientManagment {
         System.out.println("Email du client : ");
         String email = sc.nextLine();
         clientList.add(new Client(id, lastName, name, birthDate, email));
+        System.out.println(clientList.size());
     }
 
     public void searchClient(){

@@ -21,6 +21,7 @@ public class AccountManagment {
         for (int j = 0; j < clientList.size()+1; j++) {
             System.out.println("test 2");
             System.out.println(id);
+            System.out.println(clientList.size());
             System.out.println(clientList.get(j));
             if (clientList.get(j).getId().equals(id)) {
                 System.out.println("yo");
