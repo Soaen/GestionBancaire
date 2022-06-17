@@ -71,6 +71,8 @@ public class AccountManagment {
 
     public void searchClient(String id) {
         for (int j = 0; j < cm.clientList.size(); j++) {
+            System.out.println(cm.clientList.get(j).getId());
+            System.out.println(id);
             if (cm.clientList.get(j).getId().equals(id)) {
                 System.out.println("yo");
                 test = cm.clientList.get(j);
