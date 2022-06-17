@@ -12,11 +12,12 @@ public class AccountManagment {
     Scanner sc = new Scanner(System.in);
     int choix = 0;
     public Client test;
-
+    private ClientManagment clientm;
 
     public void searchClient(String id) {
         System.out.println("test 1");
-        ArrayList<Client> clientList = cm.getClientList();
+        clientm = new ClientManagment();
+        ArrayList<Client> clientList = clientm.getClientList();
         for (int j = 0; j < clientList.size()+1; j++) {
             System.out.println("test 2");
             System.out.println(id);
