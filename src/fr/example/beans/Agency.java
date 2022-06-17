@@ -15,5 +15,13 @@ public class Agency {
         return codeAgency;
     }
 
+    public String getNameAgency() {
+        return nameAgency;
+    }
+
+    public String getAddressAgency() {
+        return addressAgency;
+    }
+
     public Agency(){}
 }

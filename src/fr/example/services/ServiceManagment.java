@@ -27,7 +27,10 @@ public class ServiceManagment {
             case 7:
                 cm.infoClient();
                 break;
-            case 8 :
+            case 8:
+                am.listAgence();
+                break;
+            case 9 :
                 System.out.println("Au revoir !");
                 break;
             default:
