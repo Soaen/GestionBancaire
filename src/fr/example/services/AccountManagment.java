@@ -37,10 +37,17 @@ public class AccountManagment {
         System.out.println("3 = Plan Épargne Logement");
         choix = sc.nextInt();
         switch (choix) {
-            case 1 -> new Courant(nbAccount, agencyCode, balance, overdraft, client);
-            case 2 -> new LivretA(nbAccount, agencyCode, balance, overdraft, client);
-            case 3 -> new Logement(nbAccount, agencyCode, balance, overdraft, client);
-            default -> System.out.println("Entrez un chiffre entre 1 et 3 !");
+            case 1:
+                new Courant(nbAccount, agencyCode, balance, overdraft, client);
+                break;
+            case 2 :
+                new LivretA(nbAccount, agencyCode, balance, overdraft, client);
+                break;
+            case 3 :
+                new Logement(nbAccount, agencyCode, balance, overdraft, client);
+                break;
+            default :
+                System.out.println("Entrez un chiffre entre 1 et 3 !");
         }
     }
 
