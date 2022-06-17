@@ -12,24 +12,8 @@ public class AccountManagment {
     Scanner sc = new Scanner(System.in);
     int choix = 0;
     public Client test;
-    private ClientManagment clientm;
 
-    public void searchClient(String id) {
-        System.out.println(clientm.getClientList());
-        System.out.println("test 1");
-        clientm = new ClientManagment();
-        ArrayList<Client> clientList = clientm.getClientList();
-        for (int j = 0; j < clientList.size()+1; j++) {
-            System.out.println("test 2");
-            System.out.println(id);
-            System.out.println(clientList.size());
-            System.out.println(clientList.get(j));
-            if (clientList.get(j).getId().equals(id)) {
-                System.out.println("yo");
-                test = clientList.get(j);
-            }
-        }
-    }
+
     public void creerCompte() {
         System.out.println("Numéro de compte : ");
         float nbAccount = sc.nextFloat();
@@ -48,8 +32,7 @@ public class AccountManagment {
         boolean overdraft = tooMuch.equals("O");
         System.out.println("quel est l'id du client du compte ?");
         String id = sc.nextLine();
-        searchClient(id);
-        Client client = test;
+        Client client = cm.searchClient(id);
         System.out.println("Quel type de compte voulez-vous créer ? ");
         System.out.println("1 = Compte courant");
         System.out.println("2 = Livret A");

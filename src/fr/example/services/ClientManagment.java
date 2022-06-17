@@ -105,8 +105,19 @@ public class ClientManagment {
             System.out.println("E-Mail : " + e.getEmail());
         });
     }
-    public ArrayList<Client> getClientList(){
-        return clientList;
+
+    public Client searchClient(String id) {
+        System.out.println("test 1");
+        for (int j = 0; j < clientList.size()+1; j++) {
+            System.out.println("test 2");
+            System.out.println(id);
+            System.out.println(clientList.size());
+            System.out.println(clientList.get(j));
+            if (clientList.get(j).getId().equals(id)) {
+                System.out.println("yo");
+                return clientList.get(j);
+            }
+        }
     }
 }
 
