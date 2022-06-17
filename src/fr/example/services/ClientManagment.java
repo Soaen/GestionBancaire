@@ -14,6 +14,7 @@ import java.util.Scanner;
 
 public class ClientManagment {
     Scanner sc = new Scanner(System.in);
+    AccountManagment am = new AccountManagment();
     public ArrayList<Client> clientList = new ArrayList<>();
 
 
@@ -38,7 +39,7 @@ public class ClientManagment {
             if (Objects.equals(e.getId(), id)) {
                 System.out.println("ID : " + e.getId());
                 System.out.println("Nom : " + e.getName());
-                System.out.println("Numéro de compte : " + e.getNbAccount());
+                System.out.println("Numéro de compte : " + am.getAccount(e));
             }
         });
     }
@@ -115,16 +116,3 @@ public class ClientManagment {
         return null;
     }
 }
-
-//        System.out.println("test 1");
-//        for (int j = 0; j < clientList.size()+1; j++) {
-//            System.out.println("test 2");
-//            System.out.println(id);
-//            System.out.println(clientList.size());
-//            if (clientList.get(j).getId().equals(id)) {
-//                System.out.println("yo");
-//                return clientList.get(j);
-//            }
-//        }
-
-
