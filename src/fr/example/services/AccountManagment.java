@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class AccountManagment {
     static ArrayList<Compte> accountList = new ArrayList<>();
     ClientManagment cm = new ClientManagment();
-    static Compte c = new Compte();
     Scanner sc = new Scanner(System.in);
     int choix = 0;
 
