@@ -63,7 +63,6 @@ public class ClientManagment {
                     out.println("__________________________________________________________________________");
                     out.println("Numéro de compte                           Solde");
                     out.println("__________________________________________________________________________");
-                    out.println("En cours");
                     out.println(e.getNbAccount() + e.getBalance());
                     if (e.getBalance() > 0) {
                         out.print(":-)");

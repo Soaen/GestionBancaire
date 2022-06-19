@@ -10,7 +10,13 @@ public class AgencyManagment {
     Scanner sc = new Scanner(System.in);
     public void creerAgence(){
         System.out.println("Entrez un code Agence disponible");
-        String agencyCode = sc.nextLine();
+        int agencyCode = sc.nextInt();
+        while (String.valueOf(agencyCode).length() != 3){
+            System.out.println("Le numéro de compte doit être de 3 chiffres !");
+            System.out.println("Numéro de compte : ");
+            agencyCode = sc.nextInt();
+        }
+        sc.nextLine();
         System.out.println("Quel est le nom de l'agence ?");
         String nameAgency = sc.nextLine();
         System.out.println("Quel est l'adresse de l'agence ?");
