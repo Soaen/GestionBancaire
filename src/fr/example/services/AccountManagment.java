@@ -68,11 +68,6 @@ public class AccountManagment {
     }
 
     public static float getAccountNb(Client e){
-        for (Compte compte : accountList) {
-                if (compte.getNbAccount() == e.getNbAccount()) {
-                    return compte.getNbAccount();
-            }
-        }
         return e.getNbAccount();
     }
 }
